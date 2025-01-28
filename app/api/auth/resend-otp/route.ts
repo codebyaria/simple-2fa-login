@@ -24,6 +24,7 @@ export async function POST() {
     console.log(data);
 
     if (!data.success || otpError) {
+        console.error(otpError);
       return NextResponse.json({ error: 'Failed to generate OTP' }, { status: 500 })
     }
 

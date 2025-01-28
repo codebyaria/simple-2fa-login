@@ -40,6 +40,7 @@ export async function POST(request: Request) {
     })
 
     if (otpError) {
+      console.error(otpError);
       return NextResponse.json({ error: 'Failed to generate OTP' }, { status: 500 })
     }
 
