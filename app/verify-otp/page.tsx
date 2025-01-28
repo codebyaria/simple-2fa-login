@@ -1,4 +1,3 @@
-import { cookies } from "next/headers"
 import OTPVerificationForm from "../components/OTPVerificationForm"
 import { redirect } from "next/navigation"
 import { createClient } from "@/utils/supabase/server"

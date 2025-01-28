@@ -27,7 +27,7 @@ export async function POST() {
       return NextResponse.json({ error: 'Failed to generate OTP' }, { status: 500 })
     }
 
-    const { success: emailSent, error: emailError } = await sendOTPEmail(user.email!, otp)
+    const { success: emailSent } = await sendOTPEmail(user.email!, otp)
     
     if (!emailSent) {
       return NextResponse.json({ error: 'Failed to send OTP email' }, { status: 500 })
